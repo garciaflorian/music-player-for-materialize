@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Player</title>
+    <link rel="icon" type="image/png" href="img/icon.png" />
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <nav class="light-blue lighten-1">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Music Player</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Music Player</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Music Player</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <h2 class="header center orange-text">Music player for Materialize</h2>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+
+            <audio id="myAudio" preload="auto">
+                <source src="music/fun.mp3" type="audio/mpeg">
+            </audio>
+
+            <div class="row">
+
+                <div class="col xl3 l3 m3"></div>
+
+                <div class="col xl6 l6 m6 s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/music.png" alt="music" onClick="togglePlay()">
+                            <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" onClick="togglePlay()"><i class="material-icons" id="PausePlay">play_arrow</i></a>
+                        </div>
+                        <div class="card-content">
+                            <h5>
+                                Fun - Vibe Tracks
+                            </h5>
+                            <div class="row valign-wrapper">
+                                <div class="col s2" id="position"></div>
+                                <div class="col s6 range-field valign-wrapper"><input id="seekbar" type="range" min="0" max="0" step="1" oninput="setSeek(this.value)" onchange="setSeek(this.value)"></div>
+                                <div class="col s2 center-align" id="total"></div>
+                                <div class="col s2 center-align"><a class="" onClick="toggleMute()"><i class="material-icons teal-text lighten-1" id="Muted">volume_up</i></a></div>
+                                <div class="col s3 range-field valign-wrapper"><input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="js/music-player.js"></script>
+
+                </div>
+
+                <div class="col xl3 l3 m3"></div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    
+    <footer class="page-footer orange">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Music Player</h5>
+                    <p class="grey-text text-lighten-4">Just a music player for Materialize framework.</p>
+
+
+                </div>
+                <div class="col l6 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://github.com/garciaflorian" target="_blank">github.com/garciaflorian</a></li>
+                        <li><a class="white-text" href="https://github.com/garciaflorian/music-player-for-materialize" target="_blank">github.com/garciaflorian/music-player-for-materialize</a></li>
+                        <li><a class="white-text" href="http://materializecss.com" target="_blank">materializecss.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Create by <a class="orange-text text-lighten-3" href="https://github.com/garciaflorian">garciaflorian</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+</body>
+</html>
