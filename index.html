@@ -4,26 +4,30 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Music Player</title>
-    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link rel="shortcut icon" href="./favicon.ico"/>
 
-    <!-- CSS  -->
+    <!-- CDN 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    -->
+    <link href="./assets/css/material.icons.css" type="text/css" rel="stylesheet" />
+    <link href="./assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen" />
 </head>
 <body>
     <nav class="light-blue lighten-1">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Music Player</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Music Player</a></li>
+        <div class="nav-wrapper container">
+            <a href="./" class="brand-logo">Music Player</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="./">Home</a></li>
             </ul>
-
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="#">Music Player</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="./">Home</a></li>
+    </ul>
+    
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <h2 class="header center orange-text">Music player for Materialize</h2>
@@ -35,7 +39,7 @@
         <div class="section">
 
             <audio id="myAudio" preload="auto">
-                <source src="music/fun.mp3" type="audio/mpeg">
+                <source src="./assets/music/fun.mp3" type="audio/mpeg">
             </audio>
 
             <div class="row">
@@ -45,7 +49,7 @@
                 <div class="col xl6 l6 m6 s12">
                     <div class="card">
                         <div class="card-image">
-                            <img src="img/music.png" alt="music" onClick="togglePlay()">
+                            <img src="./assets/music/fun.png" alt="music" onClick="togglePlay()">
                             <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" onClick="togglePlay()"><i class="material-icons" id="PausePlay">play_arrow</i></a>
                         </div>
                         <div class="card-content">
@@ -62,7 +66,7 @@
                         </div>
                     </div>
 
-                    <script src="js/music-player.js"></script>
+                    
 
                 </div>
 
@@ -101,10 +105,14 @@
     </footer>
 
 
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+    <!-- CDN 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    -->
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/materialize.min.js"></script>
+    <script src="./assets/js/init.js"></script>
+    <script src="./assets/js/materialize-music-player.js"></script>
 
 </body>
 </html>
