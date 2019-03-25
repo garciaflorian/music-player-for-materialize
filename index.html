@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Music Player</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
 
     <!-- CDN 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,6 +15,7 @@
     <link href="./assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen" />
     <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen" />
 </head>
+
 <body>
     <nav class="light-blue lighten-1">
         <div class="nav-wrapper container">
@@ -27,7 +29,7 @@
     <ul class="sidenav" id="mobile-demo">
         <li><a href="./">Home</a></li>
     </ul>
-    
+
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <h2 class="header center orange-text">Music player for Materialize</h2>
@@ -37,37 +39,18 @@
 
     <div class="container">
         <div class="section">
-
-            <audio id="myAudio" preload="auto">
-                <source src="./assets/music/fun.mp3" type="audio/mpeg">
-            </audio>
-
             <div class="row">
 
                 <div class="col xl3 l3 m3"></div>
-
+                
                 <div class="col xl6 l6 m6 s12">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./assets/music/fun.png" alt="music" onClick="togglePlay()">
-                            <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" onClick="togglePlay()"><i class="material-icons" id="PausePlay">play_arrow</i></a>
-                        </div>
-                        <div class="card-content">
-                            <h5>
-                                Fun - Vibe Tracks
-                            </h5>
-                            <div class="row valign-wrapper">
-                                <div class="col s2" id="position"></div>
-                                <div class="col s6 range-field valign-wrapper"><input id="seekbar" type="range" min="0" max="0" step="1" oninput="setSeek(this.value)" onchange="setSeek(this.value)"></div>
-                                <div class="col s2 center-align" id="total"></div>
-                                <div class="col s2 center-align"><a class="" onClick="toggleMute()"><i class="material-icons teal-text lighten-1" id="Muted">volume_up</i></a></div>
-                                <div class="col s3 range-field valign-wrapper"><input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></div>
-                            </div>
-                        </div>
+                    <div class="hide" id="materialize-music-player">
+                        <audio preload="auto">
+                            <source src="./assets/music/fun.mp3" type="audio/mpeg">
+                        </audio>
+                        <img src="./assets/music/fun.png" alt="fun.png">
+                        <div>Fun - Vibe Tracks</div>
                     </div>
-
-                    
-
                 </div>
 
                 <div class="col xl3 l3 m3"></div>
@@ -76,21 +59,20 @@
 
         </div>
     </div>
-    
-    
+
+
     <footer class="page-footer orange">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Music Player</h5>
-                    <p class="grey-text text-lighten-4">Just a music player for Materialize framework.</p>
+                    <h5 class="white-text">Description</h5>
+                    <p class="grey-text text-lighten-4">Just a music player for Materialize 1.0.0 framework.</p>
 
 
                 </div>
                 <div class="col l6 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="white-text" href="https://github.com/garciaflorian" target="_blank">github.com/garciaflorian</a></li>
                         <li><a class="white-text" href="https://github.com/garciaflorian/music-player-for-materialize" target="_blank">github.com/garciaflorian/music-player-for-materialize</a></li>
                         <li><a class="white-text" href="http://materializecss.com" target="_blank">materializecss.com</a></li>
                     </ul>
@@ -115,4 +97,5 @@
     <script src="./assets/js/materialize-music-player.js"></script>
 
 </body>
+
 </html>
